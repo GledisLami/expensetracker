@@ -61,7 +61,7 @@ const ExpenseForm = (props) => {
          //create an object with desired data pointing at the state vars, which are updated on change to form, format Date
          const expenseData = {
              title: enteredTitle,
-             amount: enteredAmount,
+             amount: +enteredAmount,
              date: new Date(enteredDate)
          };
          props.onSaveExpenseData(expenseData);//we execute the function which executes saveExpenseDataHandler, on a different component, it will log for now
